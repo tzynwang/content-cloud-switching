@@ -1,38 +1,70 @@
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 16px;
+  background-color: #666;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ButtonWrapper {
+  width: 300px;
+  margin-top: 16px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.stepButton {
+  all: unset;
+  width: 12px;
+  height: 12px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: pink;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.currentButton {
+  background-color: salmon;
+}
+
+.Wrapper {
+  width: 300px;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 900px;
+  display: flex;
+  transition: transform 0.2s linear;
+}
+
+.containerONE {
+  transform: translateX(0);
+}
+
+.containerTWO {
+  transform: translateX(-300px);
+}
+
+.containerTHREE {
+  transform: translateX(-600px);
+}
+
+.item {
+  flex: 0 0 300px;
+  text-align: center;
+  color: #eee;
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  background-color: darkorange;
+  color: #333;
 }
